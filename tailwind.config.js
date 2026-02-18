@@ -4,7 +4,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: 'class',  // ← Bunu ekle!
+  darkMode: 'class',
   theme: {
     extend: {},
   },

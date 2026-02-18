@@ -1,11 +1,12 @@
 import { Navigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export default function ProtectedRoute({ children }) {
+  const { isAuthenticated } = useSelector((state) => state.auth);
 
-  const isAuth = localStorage.getItem("isAuth");
-
-  if (!isAuth) {
-    return <Navigate to="/login" />;
+  if (!isAuthenticated) {
+    // Kullanıcı giriş yapmamışsa login sayfasına yönlendir
+    return <Navigate to="/login" replace />;
   }
 
   return children;
