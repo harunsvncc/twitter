@@ -219,7 +219,7 @@ export default function Home() {
         
         {/* Sayfa başlığı */}
         <h2 className={`text-2xl font-bold mb-6 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-          {categories.find(c => c.id === selectedCategory)?.name} {t('showing')}
+          {categories.find(c => c.id === selectedCategory)?.name} Haberleri
         </h2>
 
         {/* Yükleme durumu */}
